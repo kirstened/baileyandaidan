@@ -1,92 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bailey and Aidan’s Wedding</title>
-    <link href=“css/styles.css” type=“text/css” rel=“stylesheet”/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Custom theme -->
+    <link href="css/styles.css" type="text/css" rel="stylesheet" />
+    <!--Using jQuery and jQuery UI for display effects-->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <title>Bailey and Aidan's Wedding</title>
 </head>
 
-<body>
-<header>
-    <a href="/">Bailey &amp; Aidan</a>
-    <nav>
-        <ul>
-            <li><a href="#">Wedding</a></li>
-            <li><a href="#">Information</a></li>
-            <li><a href="#">RSVP</a></li>
-        </ul>
-    </nav>
-</header>
-<div id="content">
-    <h1>Bailey &amp; Aidan <small>are Getting Married</small></h1>
-    <hr class="heart">
-    <time datetime="2016-03-26">Saturday, 26th March 2016</time>
-    <p>sdsdjhajshd</p>
-    <hr>
-    <h2>Wedding Venue</h2>
-    <p>Wedding location - The Goldie Room..</p>
-    <a href="" target="_blank" rel="nofollow" class="button">View Venue</a>
-    <figure>
-        <img src="" alt="The Goldie Room - Ceremony Venue">
-        <figcaption>
-            Photo credits: The Goldie Room -
-            <a href="" target="_blank" rel="nofollow">http://www.thegoldieroom.co.nz</a>
-        </figcaption>
-    </figure>
-    <hr>
-    <h2>Wedding Schedule</h2>
-    <p>sdfsdff</p>
-    <ol>
-        <li><time datetime="2016-03-26T17:00+13:00">5pm - Ceremony</time></li>
-        <li><time datetime="2016-03-26T18:00+13:00">6pm - Drinks &amp; Nibbles</time></li>
-        <li><time datetime="2016-03-26T19:00+13:00">7pm - Dinner</time></li>
-    </ol>
-
-</div>
-
-<footer>
-    <nav>
-        <div>
-            <h6>Contact</h6>
-            <address>
-                <a href="tel:64021123123">+64 021 123 123</a>
-                <a href="mailto:baileybuyers@me.com">baileybuyers@me.com</a>
-            </address>
+<body class="index">
+    <!-- Hero & Header -->
+    <div class="hero"></div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsible-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand active">Bailey &amp; Aidan</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="collapsible-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="./rsvp.html">RSVP</a></li>
+                    <li><a href="./photos.html">Photos</a></li>
+                    <li><a href="./information.html">Information</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+    <!-- End Hero & Header -->
 
-    <div>
-        <h6>Wedding</h6>
-        <ul>
-            <li><a href="#">Wedding Venue</a></li>
-            <li><a href="#">Wedding Schedule</a></li>
-        </ul>
+    <!-- Content -->
+    <div class="container-content container">
+        <div class="content">
+            <h1 class="text-center">Bailey &amp; Aidan</h1>
+            <h2 class="text-center">Are getting married</h2>
+            <p class="text-center"><time datetime="2016-03-26">Saturday March 26, 2016</time></p>
+            <hr>
+            <p class="text-center"><a class="btn btn-lg btn-rsvp" href="rsvp.html" rel="RSVP">RSVP</a></p>
+        </div>
     </div>
+    <!-- End Content -->
 
-    <div>
-        <h6>Location</h6>
-        <ul>
-            <li><a href="#">How to get there</a></li>
-            <li><a href="#">Accommodation</a></li>
-            <li><a href="#">Activites</a></li>
-            <li><a href="#">Entertainment</a></li>
-        </ul>
-    </div>
-
-    <div>
-        <h6>RSVP</h6>
-        <ul>
-            <li><a href="#">Contact us</a></li>
-        </ul>
-    </div>
-
-    <div class="social-media">
-       <ul>
-           <li><a href="" target="_blank" rel="nofollow" class="facebook">Facebook</a></li>
-           <li><a href="" target="_blank" rel="nofollow" class="twitter">Twitter</a></li>
-           <li><a href="" target="_blank" rel="nofollow" class="pinterest">Pinterest</a></li>
-           <li><a href="" target="_blank" rel="nofollow" class="instagram">Instagram</a></li>
-       </ul>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-4">
+                    <div class="row">
+                        <ul class="nav col-md-6">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./rsvp.html">RSVP</a></li>
+                            <li><a href="./photos.html">Photos</a></li>
+                            <li><a href="./information.html">Information</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-7 col-md-8 contact">
+                    <div class="row hidden-xs">
+                        <div class="col-md-12"><h4>Contact</h4></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Bride</h5>
+                            <ul class="nav contact">
+                                <li><a href="mailto:baileybyers@me.com" class="email">baileybyers@me.com</a></li>
+                                <li><a href="tel:0064211901857" class="phone">+64 211 901 857</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Groom</h5>
+                            <ul class="nav contact">
+                                <li><a href="mailto:aidancunningham@me.com" class="email">aidancunningham@me.com</a></li>
+                                <li><a href="00642108215101" class="phone">+64 210 821 5101</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
 </body>
 </html>

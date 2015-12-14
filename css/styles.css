@@ -1,0 +1,394 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Light.ttf");
+}
+
+@font-face {
+    font-family: "Jasmine Reminiscentse Bold";
+    src: url("../fonts/Jasmine Reminiscentse Bold.ttf");
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+
+/************************************************************
+ * Header & Navigation
+ ************************************************************/
+
+.navbar-default {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0px;
+    border-radius: 0;
+    z-index: 0;
+}
+
+.navbar > .container-fluid .navbar-brand, .navbar-default a {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 20px 10px;
+    display: block;
+    line-height: 20px;
+    border: 1px solid transparent;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default a.navbar-brand {
+    color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a.active, .navbar-default a.navbar-brand:hover, .navbar-default a.navbar-brand.active {
+    color: #c03ac5;
+    border-color: #c03ac5 !important;
+}
+
+.navbar-default .navbar-toggle {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 0;
+    background: none;
+    color: #000;
+    border-color: #000;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    color: #c03ac5;
+    background: none;
+    border-color: #c03ac5 !important;
+}
+
+.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #c03ac5;
+}
+
+.navbar-collapse {
+    border: none;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-nav {
+        background: #fff;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar > .container-fluid .navbar-brand, .navbar-default a {
+        margin: 10px 10px;
+    }
+}
+
+/************************************************************
+ * Hero Image
+ ************************************************************/
+
+.hero {
+
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.index .hero {
+    height: 480px;
+}
+
+.index .hero {
+    background-image: url("../images/index-hero.jpg");
+    background-position: center -90px;
+}
+
+.rsvp .hero {
+    background-image: url("../images/rsvp-hero.jpg");
+    background-position: center;
+}
+
+@media screen and (max-width: 800px) {
+    .hero {
+        height: 175px;
+    }
+
+    .index .hero {
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        height: 120px;
+    }
+
+    .index .hero {
+        height: 175px;
+    }
+}
+
+/************************************************************
+ * Content
+ ************************************************************/
+
+.container-content {
+    margin-top: 180px;
+}
+
+.index .container-content {
+    margin-top: 410px;
+}
+
+@media screen and (max-width: 800px) {
+    .container-content {
+        margin-top: 105px;
+    }
+
+    .index .container-content {
+        margin-top: 310px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-content {
+        margin-top: 50px;
+    }
+
+    .index .container-content {
+        margin-top: 105px;
+    }
+}
+
+/************************************************************
+ * Footer
+ ************************************************************/
+
+footer {
+    width: 100%;
+    background-color: #3f3f3f;
+    min-height: 230px;
+    margin-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+footer, footer a {
+    color: #aaa;
+}
+
+footer div.contact {
+    /*border-left: 1px solid;*/
+    /*padding-left: 50px;*/
+}
+@media screen and (min-width: 992px) {
+    footer h4 {
+        margin-bottom: 40px;
+    }
+}
+
+/************************************************************
+ * Default Styling
+ ************************************************************/
+
+h1 {
+    font-size: 62px;
+    line-height: 66px;
+    font-family: Raleway;
+    color: #3f3f3f;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 38px;
+    margin: 50px 0 40px 0;
+    color: #3f3f3f;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 800px) {
+    h2 {
+        font-size: 25px;
+        margin: 15px 0 20px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2 {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn-rsvp {
+    align-content: center;
+    background-color: #d90a40;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 15px;
+    margin: 0;
+    width: 200px;
+    border:none;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.btn-rsvp:hover, .btn-rsvp:focus {
+    background-color: #032d7b !important;
+    color: #fff;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.radio input[type="radio"]:focus + label::before {
+    outline: none;
+}
+
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: rgba(200, 200, 200, 0.9);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(200, 200, 200, 0.6);
+    outline: 0 none;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+.form-group label {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.checkbox-rsvp input[type="checkbox"]:checked + label::before,
+.checkbox-rsvp input[type="radio"]:checked + label::before {
+    border-color: #f5b0a3;
+}
+
+.checkbox label::before {
+    width: 27px;
+    height: 27px;
+    border-radius: 0;
+}
+
+.checkbox label::after {
+    width: 11px;
+    height: 11px;
+    left: 1px;
+    top: 1px;
+    font-size: 20px;
+    color: #f5b0a3;
+}
+
+.radio label::before {
+    width: 27px;
+    height: 27px;
+}
+.radio label::after {
+    width: 11px;
+    height: 11px;
+    left: 8px;
+    top: 8px;
+}
+
+.radio label {
+    padding-left: 20px;
+    line-height: 25px;
+}
+
+.checkbox label {
+    padding-left: 20px;
+    line-height: 25px;
+}
+
+.radio-rsvp input[type="radio"] + label::after {
+    background-color: #f5b0a3;
+}
+.radio-rsvp input[type="radio"]:checked + label::before {
+    border-color: #f5b0a3;
+}
+.radio-rsvp input[type="radio"]:checked + label::after {
+    background-color: #f5b0a3;
+}
+
+/************************************************************
+ * Index Page
+ ************************************************************/
+
+.index h1 {
+    font-size: 150px;
+    line-height: 154px;
+    margin: 20px;
+    font-family:"Jasmine Reminiscentse Bold";
+    text-transform: none;
+    color: #3f3f3f;
+}
+
+.index hr {
+    margin: 60px auto;
+    width: 50%;
+}
+
+.index time {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 30px 0 50px 0;
+    color: #3f3f3f;
+}
+
+@media screen and (max-width: 800px) {
+    .index h1 {
+        font-size: 125px;
+    }
+    .index hr {
+        margin: 50px auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .index h1 {
+        font-size: 75px;
+        line-height: 80px;
+    }
+    .index hr {
+        margin: 40px auto;
+    }
+}
+
+/************************************************************
+ * RSVP Page
+ ************************************************************/
+
+.rsvp .rsvp-options {
+    padding: 20px;
+    margin: 20px 1px;
+    border: 1px solid #f5b0a3;
+}
+
+.rsvp hr  {
+    margin: 30px 0;
+}
+
+.rsvp .help-block {
+    margin: 25px 0;
+}
