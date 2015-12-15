@@ -134,7 +134,7 @@ html, body {
 
 .index .hero {
     background-image: url("../images/index-hero.jpg");
-    background-position: center -90px;
+    background-position: center -110px;
 }
 
 .rsvp .hero, .thanks .hero, .sorry .hero {
@@ -165,6 +165,7 @@ html, body {
     .index .hero {
         height: 380px;
     }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -301,8 +302,8 @@ hr  {
 
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 42px;
-        line-height: 46px;
+        font-size: 36px;
+        line-height: 39px;
     }
 
     h2 {
@@ -496,8 +497,8 @@ label {
 
 @media screen and (max-width: 600px) {
     .index h1 {
-        font-size: 75px;
-        line-height: 80px;
+        font-size: 58px;
+        line-height: 62px;
     }
 
     .index hr {
@@ -526,4 +527,10 @@ label {
 .photo-app img {
     height: auto;
     width: 200px;
+}
+
+@media screen and (max-width: 476px) {
+    .photo-app a {
+        text-align: center;
+    }
 }
