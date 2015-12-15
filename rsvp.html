@@ -24,159 +24,176 @@
 </head>
 
 <body class="rsvp">
-    <!-- Hero & Header -->
-    <div class="hero"></div>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsible-navbar" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand active">Bailey &amp; Aidan</a>
+    <div class="page">
+        <!-- Hero & Header -->
+        <div class="hero"></div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsible-navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Bailey &amp; Aidan</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="collapsible-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./rsvp.html" class="active">RSVP</a></li>
+                        <li><a href="./photos.html">Photos</a></li>
+                        <li><a href="./information.html">Information</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right" id="collapsible-navbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="./rsvp.html">RSVP</a></li>
-                    <li><a href="./photos.html">Photos</a></li>
-                    <li><a href="./information.html">Information</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
+        </nav>
+        <!-- End Hero & Header -->
+
+        <!-- Content -->
+        <div class="container-content container">
+            <div class="content">
+                <h1>RSVP</h1>
+
+                <form id="rsvp-form" action="//formspree.io/kirsten.eaddy@gmail.com" method="post">
+                    <input type="hidden" id="next" name="_next" value="//www.baileyandaidan.com/thanks.html">
+                    <input type="hidden" id="subject" name="_subject" value="Website RSVP">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <div class="row rsvp-options">
+                        <div class="col-md-6">
+                            <div class="radio radio-rsvp">
+                                <input type="radio" id="accept" name="RSVP" value="Delightfully Accept" required>
+                                <label for="accept">Delightfully Accept</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="radio radio-rsvp">
+
+                                <input type="radio" id="decline" name="RSVP" value="Regretfully Decline" required>
+                                <label for="decline">Regretfully Decline</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" class="form-control" id="first-name" name="First Name" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" class="form-control" id="last-name" name="Last Name" placeholder="" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="Email" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests (including yourself)</label>
+                        <input type="number" class="form-control" id="guests" name="Number of Guests" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dietary-requirements">Dietary Requirements</label>
+                        <input type="text" class="form-control" id="dietary-requirements" name="Dietary Requirements" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" rows="3" id="message" name="Message" placeholder=""></textarea>
+                    </div>
+
+
+
+                    <div class="help-block">
+                        <p>Will you need parking?</p>
+                    </div>
+                    <div class="checkbox checkbox-rsvp">
+                        <input type="checkbox" id="parking" name="Parking" value="Yes">
+                        <label for="parking">Parking</label>
+                    </div>
+
+                    <hr>
+
+                    <div class="help-block">
+                        <p>As part of the wedding celebrations there will also be a BBQ on Easter Sunday.</p>
+                        <p>Please let us know if you can make this.</p>
+                        <p>More details to follow...</p>
+                    </div>
+                    <div class="checkbox checkbox-rsvp">
+                        <input type="checkbox" id="bbq" name="Sunday BBQ" value="Yes">
+                        <label for="bbq">Sunday BBQ</label>
+                    </div>
+                    <hr>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-large btn-rsvp">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </nav>
-    <!-- End Hero & Header -->
+        <script>
+            $(function() {
+                $("input[name='RSVP']").change(function() {
+                    $('#subject').val("Website RSVP: " + $(this).val());
+                    if ($(this).prop('id') == 'accept') {
+                        $("#next").val('//www.baileyandaidan.com/thanks.html')
+                        $("#guests").prop('required', true).prop('disabled', false);
+                        $("#dietary-requirements").prop('disabled', false);
+                        $("#bbq").prop('disabled', false);
+                        $("#parking").prop('disabled', false);
+                    } else {
+                        $("#next").val('//www.baileyandaidan.com/sorry.html')
+                        $("#guests").removeAttr('required').prop('disabled', true);
+                        $("#dietary-requirements").prop('disabled', true);
+                        $("#bbq").prop('disabled', true);
+                        $("#parking").prop('disabled', true);
+                    }
+                });
+            })
+        </script>
+        <!-- End Content -->
 
-    <!-- Content -->
-    <div class="container-content container">
-        <div class="content">
-            <h1>RSVP</h1>
-
-            <form id="rsvp-form" action="//formspree.io/kirsten.eaddy@gmail.com" method="post">
-                <input type="hidden" name="_next" value="//baillyandaidan.com/thanks.html">
-                <input type="hidden" id="subject" name="_subject" value="Website RSVP">
-                <input type="text" name="_gotcha" style="display:none">
-                <div class="row rsvp-options">
-                    <div class="col-md-6">
-                        <div class="radio radio-rsvp">
-                            <input type="radio" id="accept" name="RSVP" value="Delightfully Accept" required>
-                            <label for="accept">Delightfully Accept</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="radio radio-rsvp">
-
-                            <input type="radio" id="decline" name="RSVP" value="Regretfully Decline" required>
-                            <label for="decline">Regretfully Decline</label>
-                        </div>
-                    </div>
-                </div>
+        <!-- Footer -->
+        <footer class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="first-name">First Name</label>
-                            <input type="text" class="form-control" id="first-name" name="First Name" placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" class="form-control" id="last-name" name="Last Name" placeholder="" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="Email" placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="guests">Number of Guests (including yourself)</label>
-                    <input type="number" class="form-control" id="guests" name="Number of Guests" placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="dietary-requirements">Dietary Requirements</label>
-                    <input type="text" class="form-control" id="dietary-requirements" name="Dietary Requirements" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" rows="3" id="message" name="Message" placeholder=""></textarea>
-                </div>
-                <div class="help-block">
-                    <p>As part of the wedding celebrations there will also be a BBQ on Easter Sunday.</p>
-                    <p>Please let us know if you can make this.</p>
-                    <p>More details to follow...</p>
-                </div>
-                <div class="checkbox checkbox-rsvp">
-                    <input type="checkbox" id="bbq" name="Sunday BBQ" value="Yes">
-                    <label for="bbq">Sunday BBQ</label>
-                </div>
-                <hr>
-                <div class="form-group text-center">
-                    <button type="submit" class="btn btn-large btn-rsvp">Submit</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script>
-        $(function() {
-            $("input[name='RSVP']").change(function() {
-                $('#subject').val("Website RSVP: " + $(this).val());
-                if ($(this).prop('id') == 'accept') {
-                    $("#guests").prop('required', true).prop('disabled', false);
-                    $("#dietary-requirements").prop('disabled', false);
-                    $("#bbq").prop('disabled', false);
-                } else {
-                    $("#guests").removeAttr('required').prop('disabled', true);
-                    $("#dietary-requirements").prop('disabled', true);
-                    $("#bbq").prop('disabled', true);
-                }
-            });
-        })
-    </script>
-    <!-- End Content -->
-
-    <!-- Footer -->
-    <footer class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 col-md-4">
-                    <div class="row">
-                        <ul class="nav col-md-6">
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./rsvp.html">RSVP</a></li>
-                            <li><a href="./photos.html">Photos</a></li>
-                            <li><a href="./information.html">Information</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-7 col-md-8 contact">
-                    <div class="row hidden-xs">
-                        <div class="col-md-12"><h4>Contact</h4></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>Bride</h5>
-                            <ul class="nav contact">
-                                <li><a href="mailto:baileybyers@me.com" class="email">baileybyers@me.com</a></li>
-                                <li><a href="tel:0064211901857" class="phone">+64 211 901 857</a></li>
+                    <div class="col-sm-5 col-md-4">
+                        <div class="row">
+                            <ul class="nav col-md-6">
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./rsvp.html">RSVP</a></li>
+                                <li><a href="./photos.html">Photos</a></li>
+                                <li><a href="./information.html">Information</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
-                            <h5>Groom</h5>
-                            <ul class="nav contact">
-                                <li><a href="mailto:aidancunningham@me.com" class="email">aidancunningham@me.com</a></li>
-                                <li><a href="00642108215101" class="phone">+64 210 821 5101</a></li>
-                            </ul>
+                    </div>
+                    <div class="col-sm-7 col-md-8 contact">
+                        <div class="row hidden-xs">
+                            <div class="col-md-12"><h4>Contact</h4></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Bride</h5>
+                                <ul class="nav contact">
+                                    <li><a href="mailto:baileybyers@me.com" class="email">baileybyers@me.com</a></li>
+                                    <li><a href="tel:0064211901857" class="phone">+64 211 901 857</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Groom</h5>
+                                <ul class="nav contact">
+                                    <li><a href="mailto:aidancunningham@me.com" class="email">aidancunningham@me.com</a></li>
+                                    <li><a href="00642108215101" class="phone">+64 210 821 5101</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
+        </footer>
+        <!-- End Footer -->
+    </div>
 </body>
 </html>
