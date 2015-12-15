@@ -528,9 +528,3 @@ label {
     height: auto;
     width: 200px;
 }
-
-@media screen and (max-width: 476px) {
-    .photo-app a {
-        text-align: center;
-    }
-}
