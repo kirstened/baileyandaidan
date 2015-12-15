@@ -23,219 +23,6 @@ a:hover {
     color: #032d7b;
 }
 
-/************************************************************
- * Page
- ************************************************************/
-
-html, body {
-    height:100%;
-    margin: 0;
-    padding: 0;
-}
-
-.page {
-    display: flex;
-    min-height: 100%;
-    flex-direction: column;
-}
-
-.container-content {
-    flex: 1;
-}
-
-/************************************************************
- * Header & Navigation
- ************************************************************/
-
-.navbar-default {
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    box-shadow: none;
-    margin-bottom: 0px;
-    border-radius: 0;
-    z-index: 0;
-}
-
-.navbar > .container-fluid .navbar-brand, .navbar-default a {
-    font-size: 12px;
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 20px 10px;
-    display: block;
-    line-height: 20px;
-    border: 1px solid transparent;
-}
-
-.navbar-default .navbar-nav > li > a, .navbar-default a.navbar-brand {
-    color: #000;
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a.active, .navbar-default a.navbar-brand:hover, .navbar-default a.navbar-brand.active {
-    color: #c03ac5;
-    border-color: #c03ac5 !important;
-}
-
-.navbar-default .navbar-toggle {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 0;
-    background: none;
-    color: #000;
-    border-color: #000;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #000;
-}
-
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    color: #c03ac5;
-    background: none;
-    border-color: #c03ac5 !important;
-}
-
-.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
-    background-color: #c03ac5;
-}
-
-.navbar-collapse {
-    border: none;
-}
-
-@media screen and (max-width: 767px) {
-    .navbar-nav {
-        background: #fff;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .navbar > .container-fluid .navbar-brand, .navbar-default a {
-        margin: 10px 10px;
-    }
-}
-
-/************************************************************
- * Hero Image
- ************************************************************/
-
-.hero {
-    height: 250px;
-    width: 100%;
-    position: absolute;
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.index .hero {
-    height: 480px;
-}
-
-.index .hero {
-    background-image: url("../images/index-hero.jpg");
-    background-position: center -110px;
-}
-
-.rsvp .hero, .thanks .hero, .sorry .hero {
-    background-image: url("../images/rsvp-hero.jpg");
-    background-position: center;
-}
-
-.photos .hero {
-    background-image: url("../images/photos-hero.jpg");
-    background-position: center;
-}
-
-.information .hero {
-    background-image: url("../images/information-hero.jpg");
-    background-position: center;
-}
-
-.notfound .hero {
-    background-image: url("../images/notfound-hero.jpg");
-    background-position: center;
-}
-
-@media screen and (max-width: 800px) {
-    .hero {
-        height: 175px;
-    }
-
-    .index .hero {
-        height: 380px;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    .hero {
-        height: 120px;
-    }
-
-    .index .hero {
-        height: 175px;
-    }
-}
-
-/************************************************************
- * Content
- ************************************************************/
-
-.container-content {
-    margin-top: 180px;
-}
-
-.index .container-content {
-    margin-top: 410px;
-}
-
-@media screen and (max-width: 800px) {
-    .container-content {
-        margin-top: 105px;
-    }
-
-    .index .container-content {
-        margin-top: 310px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .container-content {
-        margin-top: 50px;
-    }
-
-    .index .container-content {
-        margin-top: 105px;
-    }
-}
-
-/************************************************************
- * Footer
- ************************************************************/
-
-footer {
-    width: 100%;
-    background-color: #3f3f3f;
-    min-height: 230px;
-    margin-top: 100px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    color: #fff;
-}
-
-footer, footer a {
-    color: #aaa;
-}
-
-@media screen and (min-width: 992px) {
-    footer h4 {
-        margin-bottom: 10px;
-    }
-    footer h5 {
-        margin-bottom: 5px;
-    }
-}
 
 /************************************************************
  * Default Styling
@@ -458,6 +245,221 @@ label {
 }
 .radio-rsvp input[type="radio"]:checked + label::after {
     background-color: #f5b0a3;
+}
+
+/************************************************************
+ * Page
+ ************************************************************/
+
+html, body {
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+.container-content {
+    flex: 1;
+}
+
+/************************************************************
+ * Header & Navigation
+ ************************************************************/
+
+.navbar-default {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0px;
+    border-radius: 0;
+    z-index: 0;
+}
+
+.navbar > .container-fluid .navbar-brand, .navbar-default a {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 20px 10px;
+    display: block;
+    line-height: 20px;
+    border: 1px solid transparent;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default a.navbar-brand {
+    color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a.active, .navbar-default a.navbar-brand:hover, .navbar-default a.navbar-brand.active {
+    color: #c03ac5;
+    border-color: #c03ac5 !important;
+}
+
+.navbar-default .navbar-toggle {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 0;
+    background: none;
+    color: #000;
+    border-color: #000;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    color: #c03ac5;
+    background: none;
+    border-color: #c03ac5 !important;
+}
+
+.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #c03ac5;
+}
+
+.navbar-collapse {
+    border: none;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-nav {
+        background: #fff;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar > .container-fluid .navbar-brand, .navbar-default a {
+        margin: 10px 10px;
+    }
+}
+
+/************************************************************
+ * Hero Image
+ ************************************************************/
+
+.hero {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.index .hero {
+    height: 480px;
+}
+
+.index .hero {
+    background-image: url("../images/index-hero.jpg");
+    background-position: center -110px;
+}
+
+.rsvp .hero, .thanks .hero, .sorry .hero {
+    background-image: url("../images/rsvp-hero.jpg");
+    background-position: center;
+}
+
+.photos .hero {
+    background-image: url("../images/photos-hero.jpg");
+    background-position: center;
+}
+
+.information .hero {
+    background-image: url("../images/information-hero.jpg");
+    background-position: center;
+}
+
+.notfound .hero {
+    background-image: url("../images/notfound-hero.jpg");
+    background-position: center;
+}
+
+@media screen and (max-width: 800px) {
+    .hero {
+        height: 175px;
+    }
+
+    .index .hero {
+        height: 380px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        height: 120px;
+    }
+
+    .index .hero {
+        height: 175px;
+    }
+}
+
+/************************************************************
+ * Content
+ ************************************************************/
+
+.container-content {
+    margin-top: 180px;
+}
+
+.index .container-content {
+    margin-top: 410px;
+}
+
+@media screen and (max-width: 800px) {
+    .container-content {
+        margin-top: 105px;
+    }
+
+    .index .container-content {
+        margin-top: 310px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-content {
+        margin-top: 50px;
+    }
+
+    .index .container-content {
+        margin-top: 105px;
+    }
+}
+
+/************************************************************
+ * Footer
+ ************************************************************/
+
+footer {
+    width: 100%;
+    background-color: #3f3f3f;
+    min-height: 230px;
+    margin-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+footer, footer a {
+    color: #aaa;
+}
+
+@media screen and (min-width: 768px) {
+    footer h4 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    footer h5 {
+        margin-bottom: 5px;
+    }
 }
 
 /************************************************************
